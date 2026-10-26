@@ -1,0 +1,46 @@
+2.a) <!-- Código controlado el día 12/08/2009 →
+
+Es un comentario en HTML, puede ir en cualquier parte y no produce efecto visual
+
+2.b) <div id="bloque1">Contenido del bloque1</div>
+
+Es un elemento de bloque, va dentro del <body>. Define una división genérica. Atributo: id="bloque1" (opcional)
+
+2.c) <img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32"
+longdesc="detalles.htm" />
+
+Es un elemnto imagen vacío, va dentro del <body>. Atributos obligatorios: src (ruta de la img) y alt (texto alternativo). Atributos opcionales: id, name, width, height, longdesc. En este caso no se verá una imagen sino el texto alternativo en su lugar
+
+2.d) <meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+    <meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+
+Son metadatos <meta> y van dentro del <head>. No producen efecto visual. En el primero, con keywords se definen las palabras claves para buscadores, y en el segundo la fecha de expiración del caché. Al usar name o http-equiv content es obligatorio.
+
+2. e) <a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+rel="help">Resumen HTML </a>
+
+Elemento enlace <a>. Va en el <body>. En href va la ruta (obligatorio). type, hreflang, charset, rel, no son obligatorios.
+
+2.f) <table width="200" summary="Datos correspondientes al ejercicio vencido">
+        <caption align="top"> Título </caption>
+        <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">A</th>
+            <th scope="col">B</th>
+            <th scope="col">C</th>
+        </tr>
+        <tr>
+            <th scope="row">1º</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th scope="row">2º</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+
+Elemento tabla <table>, va dentro del <body>. Tiene título <caption>, filas <tr>, y encabezados de tabla <th>. Atributos: width, summary, align, scope.

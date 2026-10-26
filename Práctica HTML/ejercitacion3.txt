@@ -1,0 +1,40 @@
+3.a) <a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+<a href="#">Click aquí para ir a Google</a>
+<a href="#arriba">Click aquí para volver arriba</a>
+<a name="arriba" id="arriba"></a>
+
+1-enlace normal
+2-enlace que se abre en una nueva pestaña por el target="_blank"
+3-enlace con metadatos MIME
+4-va al inicio de la página
+5-va a un ancla interna llamada arriba
+6-define el ancla
+
+3.b) <p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="ima
+gen1" />Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a
+href="http://www.google.com.ar">Click aquí</a></p>
+
+Imágenes y enlaces: 1) Imagen seguida de texto enlace. 2) La imagen ES el enlace. 3) La imagen y el texto forman un único enlace. 4) La imagen es un enlace y el texto es otro enlace separado.
+
+3.c) Listas: 1) Lista desordenada (viñetas). 2) Lista ordenada (números). 3) Lista ordenada donde el 2do ítem fuerza el valor 2. 4) Falsa lista creada con texto y saltos de línea <br> dentro de un bloque de cita.
+
+3.d) Tablas: La 1ra usa la semántica estándar (<th> para encabezados que ya centran y ponen negrita). La 2da simula encabezados usando <td> con <div> y <strong>.
+
+3.e) colspan: La 2da tabla usa colspan="3" para que una celda ocupe el ancho de 3 columnas. La 1ra no lo hace bien.
+
+3.f) rowspan vs colspan: La 1ra usa rowspan="2" (une dos celdas verticalmente/filas). La 2da usa colspan="2" (une dos celdas horizontalmente/columnas).
+
+3.g) Márgenes de tabla: La 2da anula el espacio entre celdas y su contenido con cellpadding="0" y cellspacing="0".
+
+3.h) Formularios: 1) Usa método POST. 2) Usa método GET. 3) Usa acción mailto y botón reset.
+
+3.i) Botones: <button> permite incluir HTML complejo en su interior (como una imagen + texto). <input type="button"> solo acepta texto simple en su atributo value.
+
+3.j) Radio buttons: En el 1ro, ambos comparten el mismo name="opcion", por lo que solo se puede elegir uno (excluyentes). En el 2do tienen distinto name, permitiendo seleccionar ambos a la vez (funcionan como checkboxes, lo cual es incorrecto para radios).
+
+3.k) Select: El 1ro es un menú desplegable normal de selección única. El 2do (multiple="multiple") muestra una lista abierta y permite seleccionar varios elementos con la tecla Ctrl/Shift.

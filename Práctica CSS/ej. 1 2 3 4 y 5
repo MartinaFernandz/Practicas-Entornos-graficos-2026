@@ -1,0 +1,129 @@
+Ejercicio 1:
+
+    1) ¿Qué es CSS y para qué se usa?
+
+    CSS son las siglas de hojas de estilo en cascada (Cascading Style Sheets). No es un lenguaje de programación ni un lenguaje de marcado, sino un lenguaje de hojas de estilo definido en las especificaciones del W3C (CSS1, CSS2 y CSS3), que permite separar el contenido (la información en el documento HTML) del diseño o formato (la presentación). Sirve para controlar la apariencia de una página web describiendo cómo se presentan los elementos al usuario (especificando tamaño, fuentes, color, espaciado entre textos y recuadros, visibilidad, márgenes y la disposición de textos e imágenes).
+
+
+    2) CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+
+    Una regla CSS le dice al navegador qué parte del documento se verá afectada y qué cambios de presentación se le aplicarán:
+    -Selector: Indica la etiqueta o parte del documento HTML sobre la que recae la regla (por ejemplo h1 o p). Los selectores pueden aparecer de forma individual o agrupados separándolos con comas (h1, h2, h3 { color: red; }).
+    -Propiedad: Especifica qué aspecto se va a modificar (por ejemplo color, font-family, text-align).
+    -Valor: Establece el ajuste asignado a la propiedad (por ejemplo red o #ffff00). Si el valor está compuesto por más de una palabra, se escribe entre comillas (por ejemplo font-family: "sans serif";).   
+    -Bloque de declaraciones: Las propiedades se encierran entre llaves { ... } y deben separarse obligatoriamente con un punto y coma (;).
+
+
+    3) ¿ Cuáles son las tres formas de dar estilo a un documento?
+
+    Se puede dar estilo a un documento de tres maneras:
+    -A nivel de elemento HTML (directamente a la marca): Se definen los estilos usando la propiedad/atributo style en la misma etiqueta HTML
+    -A nivel de página (en el head de la página): Se definen los estilos en una sección especial dentro de la cabecera del documento, encerrados entre las marcas <style> y </style>. Se utiliza cuando las reglas solo serán empleadas por esa página en concreto.
+    -En un archivo externo independiente: Es la metodología más empleada. Se agrupan todas las reglas en un archivo separado con extensión .css y se enlaza desde el <head> del HTML con la etiqueta <link rel="StyleSheet" href="estilos.css" type="text/css">. Permite aplicar las mismas reglas a todo el sitio web y aprovecha la memoria caché del navegador para no descargar el diseño en cada página.
+
+
+    4) ¿ Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique cada uno.
+
+    -Selector de etiqueta o elemento: Aplica la regla a todas las etiquetas HTML del mismo tipo en el documento. Ejemplo: p { color: red; }
+    -Selectores agrupados: Permiten aplicar las mismas declaraciones a múltiples elementos a la vez separándolos por comas. Ejemplo: h1, h2, h3 { color: red; }
+    -Selector de clase (.clase): Permite aplicar estilos a uno o varios elementos que contengan dicha clase en su código HTML.Ejemplo:.resaltado { color: #ff0000; }
+    -Selector de ID (#identificador): Aplica estilo a un elemento único identificado en el documento. Ejemplo:#titulo { background-color: #CCFFCC; }
+
+
+    5) ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+
+    Una pseudo-clase es una palabra clave que se añade a un selector para definir el formato de un elemento según el estado dinámico en el que se encuentre ante la interacción del usuario.
+    Las más utilizadas aplicadas a vínculos:
+    -a:link: Define la apariencia del enlace en su estado natural (aún no visitado).
+    -a:visited: Define el aspecto del enlace cuando la dirección ya fue visitada por el usuario.
+    -a:hover: Define el estilo visual cuando el usuario pasa el cursor del mouse por encima del enlace
+    -a:active: Aplica el estilo en el momento exacto en que se hace clic sobre el vínculo.
+
+
+    6) ¿ Qué es la herencia?
+
+    Es la capacidad que tiene CSS para que los elementos secundarios o descendientes adopten automáticamente las propiedades visuales definidas en un elemento contenedor o superior (como el body).
+
+
+    7) ¿ En qué consiste el proceso denominado cascada
+
+    El proceso de cascada es el mecanismo que resuelve cómo se combinan y aplican las distintas reglas de estilo sobre un documento cuando varias de ellas afectan a un mismo elemento.
+    Permite que convivan reglas definidas a nivel general, reglas a nivel de página y reglas a nivel de elemento. El navegador evalúa el origen de las reglas, el peso del selector y el orden en que fueron declaradas para determinar cuál prevalece en caso de conflicto.
+
+
+Ejericicio 2:
+
+    <p id="normal"> aplica la regla p#normal. El texto se muestra en negrita, tipografía Arial y tamaño de 11px.
+    <p id="destacado"> y <table id="destacado"> aplican la regla *#destacado. Ambos quedan rodeados por un borde azul sólido de 2px.
+    <p id="distinto"> aplica la regla #distinto. El texto se ve en rojo sobre un fondo celeste claro.
+
+
+Ejercicio 3:
+
+    <p class="desarrollo"> aplica la regla *.desarrollo. El texto se muestra en tamaño chico de 8px.
+    <p class="quitar"> aplica la regla p.quitar. El texto se visualiza de color rojo.
+    <p> no tiene clases. Se muestra con el formato y tamaño por defecto del navegador.
+    <p class="importante"> aplica la regla .importante. El texto se visualiza en tamaño grande de 20px.
+    <h1 class="quitar"> no aplica la regla p.quitar porque es un <h1> y no un <p>. Mantiene su estilo de título por defecto (negro).
+    <p class="quitar importante"> aplica ambas reglas al mismo tiempo. El texto se visualiza en tamaño 20px y color rojo.
+
+
+Ejericicio 4:
+
+    Párrafo (<p>):
+    -Izquierda: 14px, normal (el estilo en línea gana a la clase) y negro.
+    -Derecha: 10px, normal y negro (la regla p gana a la herencia del body).
+    Texto de la tabla (<td>):
+    -Izquierda: Verde y tamaño normal por defecto.
+    -Derecha: Verde, pero con 14px y en negrita (lo hereda del body)
+    Enlace (<a>):
+    -Ambos cambian de color según el estado
+    -derecha: se ve en negrita por herencia
+
+
+Ejercicio 5:
+
+    1)
+    h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+    color: red;
+    }
+
+    2)
+    div p [href] {
+    color: black;
+    }
+
+    3)
+    #ultimo ul {
+    color: yellow;
+    }
+
+    #ultimo ul a {
+    color: blue;
+    }
+
+    4)
+    div .importante {
+    color: green;
+    }
+
+    h1 .importante, h2 .importante, h3 .importante, 
+    h4 .importante, h5 .importante, h6 .importante {
+    color: red;
+    }
+
+    5)
+    h1[title] {
+    color: blue;
+    }
+
+    6)
+    ol a:link {
+    color: blue;
+    text-decoration: none;
+    }
+
+    ol a:visited {
+    color: violet;
+    text-decoration: none;
+    }

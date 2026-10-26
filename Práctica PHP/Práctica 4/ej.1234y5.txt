@@ -1,0 +1,43 @@
+Ejercicio 1
+
+    Variables y tipos:
+    $a: boolean (TRUE)
+    $b, $c: string ("xyz", 'xyz')
+    $d, $f, $g, $i: integer
+
+    Operadores: Multiplicación (*), asignación (=, +=), incremento (++) y ternario (? :)
+
+    Funciones y parámetros: doble($i) (de usuario, parámetro por valor), gettype(), is_int() y is_string() (nativas, reciben la variable por parámetro
+
+    Estructuras de control: Condicionales if y operador ternario ? :
+
+    Paso a paso de la salida:
+    1.gettype: imprime booleanstringstringinteger
+    2.$d += 4 $\rightarrow$ $d = 16
+    3.is_string($a) da falso, no hace nada.
+    4.Ternario: $a es TRUE, hace pre-incremento ++$d $\rightarrow$ $d = 17
+    5.$f = doble($d++): manda 17 a la función ($17 \times 2 = 34$), luego $d sube a 18 $\rightarrow$ $f = 34 y $d = 18
+    6.$g = $f += 10 $\rightarrow$ $f = 44 y $g = 44.
+    7.echo final: imprime 1xyzxyz184444 (el booleano TRUE se muestra como 1).
+
+    Salida en pantalla:
+    > booleanstringstringinteger1xyzxyz184444
+
+
+Ejercicio 2
+
+    a) Bucles: Si, son equivalentes. Los tres imprimen los números del 1 al 10
+    b) For: Si, son equivalentes. Los cuatro bucles imprimen del 1 al 10 (usan distintas formas de incremento o corte con break)
+    c) Condicionales: Si, son equivalentes. El switch replica exactamente las mismas tres ramas que el if-elseif
+
+
+Ejercicio 3
+
+    a) Genera dinámicamente con dos bucles for anidados una tabla HTML de 5 filas y 2 columnas ($row = 5; $col = 2;)
+    b) Procesa en el mismo script ($_SERVER['PHP_SELF']) un formulario que pide la edad y evalúa si el usuario es mayor o menor de edad ($\ge 21$)
+
+
+Ejercicio 4
+
+    Salida 1:El (avisa variables no definidas porque $flor y $color todavía no existen)
+    Salida 2:El clavel blanco(el include carga datos.php y ya reconoce los valores)

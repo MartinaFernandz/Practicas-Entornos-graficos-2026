@@ -1,0 +1,10 @@
+Ejercicio 1: Si, son equivalentes. Ambos generan el mismo array asociativo; al no especificar clave para el valor 4, php le asigna automáticamente la clave numérica 0
+
+Ejercicio 2:
+a)bar1 (el booleano true se imprime como 1)
+b)5942 (accede a los índices 6, 13 y 'a' de la matriz interna)
+c)No imprime nada (manipula datos en memoria y borra el array con unset)
+
+Ejercicio 3:
+a)Muestra la hora y fecha actual del sistema
+b)5+6=11 (evalúa la suma de los argumentos 5 y 6 e imprime la operación)
