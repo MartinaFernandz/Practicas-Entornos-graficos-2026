@@ -1,0 +1,19 @@
+Práctica 5 - Entornos Gráficos
+
+Para probar el envío de correos con mail() se utilizó Mailpit, un servidor SMTP local que permite recibir y visualizar los mensajes sin enviarlos realmente por Internet.
+
+Configuración de php.ini:
+
+SMTP = 127.0.0.1
+smtp_port = 1025
+sendmail_from = me@example.com
+
+Mailpit se ejecuta mediante:
+
+mailpit.exe --smtp 127.0.0.1:1025 --listen 127.0.0.1:8025
+
+Los correos se pueden visualizar en http://127.0.0.1:8025
+
+Las direcciones de correo y el enlace del ejercicio 3 son ficticios y se utilizaron únicamente para realizar pruebas.
+
+El ejercicio 4 utiliza sesiones PHP y no requiere Mailpit.
